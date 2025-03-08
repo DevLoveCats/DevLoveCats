@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+   
+}
+
+ p {
+    letter-spacing: 5px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+
+header {
+    position:fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    z-index: 1000;
+    transition: 0.6s;
+}
+
+header.sticky {        
+    background: rgba(0, 0, 0, 0.965);   
+    padding: 15px 100px;
+}
+
+
+.logo {
+    position: relative;
+    display: flex;
+    width: 150px;
+    
+    
+}
+
+
+
+header .menu {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+ 
+}
+
+
+header .btn {
+    color: #daa520;
+    font-size: 25px;
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+header .menu a {
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 30px;
+    padding: 0 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+    
+}
+
+
+
+header .menu a:hover{
+   
+    background: #daa520;
+}
+
+
+
+
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height:100vh;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(8, 8, 8, 0.9)), url(img/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+    border-bottom:  2px solid aliceblue;
+}
+
+.banner h1 {
+    color: #daa520;
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
+}
+
+.artigo {
+    position: relative;
+    text-align: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.965); 
+    padding: 20px 100px;
+}
+
+.artigo h2 {
+    color: aliceblue;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.artigo p {
+    color: aliceblue;
+    font-size: 20px;
+    margin: 30px 0;  
+}
+
+span {
+    color: #daa520;
+}
+
+@media (max-width: 768px) {
+    header .btn {
+        display: block;  
+    }
+
+    header .menu {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.965);  
+        flex-direction: column;
+        min-width: 100%;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.6s;
+    }
+    
+    header .menu.active {
+        right:0;
+    }
+
+    header .menu .close-btn {
+        position: absolute;
+        color: #daa520;
+        font-size: 25px;
+        top: 20px;
+        left: 50%;    /*-- Por mis que esteja centralizado, o navegador não centralizad pelo centro do ícone e sim pelo lado esquerdo, deixando um pouco deslocado ao lado direito --*/
+        transform: translateX(-50%); /*--Garante que esteja centralizado no seu proprio exixo--*/
+        cursor: pointer;
+    }
+   
+
+  
+
+    header .menu a {
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    
+}
